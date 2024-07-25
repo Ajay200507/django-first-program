@@ -1,0 +1,62 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body >
+    <h1>this is table</h1>
+    <br>
+    <br>
+    <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>city</th>
+    </tr>
+    {% for data in data_list %}
+    {% if data.show == 1 %}
+
+    <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.city}}</td>
+    </tr>
+    {% endif %}
+
+    {% endfor %}
+
+
+
+    <!-- <img src="{% static 'img/image.png' %}" /> -->
+
+    <!-- <tr>
+        <td>bob</td>
+        <td>21</td>
+        <td>new york</td>
+    </tr>
+     <tr>
+        <td>gorge</td>
+        <td>36</td>
+        <td>new york</td>
+    </tr> -->
+    </table>
+<br> <br>
+    <form action="/testapp/update" method="post">
+        {% csrf_token %}
+        <label for="name"> name</label>
+        <input id="name" type="text" name="name">
+<br>
+        <label for="age"> age</label>
+        <input id="age" type="text" name="age">
+
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+    <br>
+</body>
+</html>

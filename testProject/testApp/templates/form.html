@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form action="/testapp/inserted" method="post">
+            {% csrf_token %}
+
+            <input id="name" type="text" name="name" />
+            <label for="name">name :</label>
+<br>
+            <input id="age" type="text" name="age" />
+            <label for="age">age :</label>
+<br>
+            <input id="city" type="text" name="city" />
+            <label for="city">city :</label>
+<br>
+            <input id="show" type="text" name="show" />
+            <label for="show">show :</label>
+            
+            <input type="submit" value="Submit" />
+
+
+
+        </form>
+    </body>
+</html>
